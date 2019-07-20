@@ -1,6 +1,6 @@
 node {
-  def server = Artifactory.server 'newtechacademy.jfrog.io'
-  def myGradleContainer = docker.image('gradle:jdk8-alpine')
+  def server = Artifactory.server 'repo.io'
+  def myGradleContainer = docker.image('docker.repo/gradle:jdk8-alpine')
   myGradleContainer.pull()
   stage('prep') {
     checkout scm
